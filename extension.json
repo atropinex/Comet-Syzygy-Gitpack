@@ -1,0 +1,8 @@
+{
+    "id": "package-updates",
+    "name": "Package Updates",
+    "version": "1.0.0",
+    "description": "Shows which npm and NuGet packages of a project are out of date, and updates them from a window with a built-in console.",
+    "author": "Flux Syzygy",
+    "main": "main.js"
+}

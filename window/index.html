@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'" />
+    <title>Package updates</title>
+    <link rel="stylesheet" href="window.css" />
+</head>
+<body>
+    <div class="app" id="app">
+        <header class="top">
+            <div class="title">
+                <h1 id="project-name">Packages</h1>
+                <p id="project-path" class="muted"></p>
+            </div>
+            <div class="tabs" id="tabs" role="tablist"></div>
+            <div class="top-actions">
+                <span id="checked" class="muted"></span>
+                <button id="refresh" class="btn">Refresh</button>
+            </div>
+        </header>
+
+        <main class="main">
+            <section class="list-pane">
+                <div class="toolbar">
+                    <input id="filter" class="field" type="search" placeholder="Filter packages" autocomplete="off" />
+                    <div class="chips" id="chips"></div>
+                </div>
+
+                <div class="table-wrap" id="table-wrap"></div>
+
+                <div class="bulk" id="bulk"></div>
+            </section>
+
+            <aside class="detail" id="detail"></aside>
+        </main>
+
+        <div class="splitter" id="splitter" title="Drag to resize the console"></div>
+
+        <section class="console" id="console">
+            <div class="console-head">
+                <strong>Console</strong>
+                <span id="running" class="muted"></span>
+                <span class="spacer"></span>
+                <button id="audit" class="btn small">Audit</button>
+                <button id="stop" class="btn small danger" disabled>Stop</button>
+                <button id="clear" class="btn small">Clear</button>
+                <label class="check"><input id="autoscroll" type="checkbox" checked /> Follow output</label>
+            </div>
+            <div class="log" id="log" tabindex="0"></div>
+            <form class="prompt" id="prompt" autocomplete="off">
+                <span class="prompt-mark">$</span>
+                <input id="command" type="text" spellcheck="false" placeholder="Run a command in the project folder" />
+            </form>
+        </section>
+    </div>
+
+    <script src="window.js"></script>
+</body>
+</html>
